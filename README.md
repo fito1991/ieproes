@@ -6,7 +6,7 @@ IMPORTANTE: Antes de instalar el proyecto debe tener instalado COMPOSER, PHP, MY
    
 Para instalar PHP, MYSQL y APACHE en Windows puedes usar XAMPP, para este proyecto se utilizó esta versión:
 
-    https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.1.17/xampp-windows-x64-8.1.17-0-VS16-installer.exe
+   https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.1.17/xampp-windows-x64-8.1.17-0-VS16-installer.exe
 
 ## Instalación del código
 
