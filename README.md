@@ -59,6 +59,18 @@ Si deseas probar el envió de correos como por ejemplo, el reseteo de contraseñ
 
 ![image](https://user-images.githubusercontent.com/7317955/232350154-db1c4a54-6f47-4564-a5bf-1bb4ad53edcd.png)
 
+Ve al menú "Inboxes" dentro de "Email Testing" y da click en la tabla de la derecho donde dice "My Inbox"
+
+![image](https://user-images.githubusercontent.com/7317955/232350339-19e31cfa-812d-42e2-b7ff-a9251f916cf6.png)
+
+En el select de "Integrations" selecciona la opción "Laravel 7+" y copia la configuración en tu archivo .env
+
+![image](https://user-images.githubusercontent.com/7317955/232350531-ca4564c6-b79e-41a8-aa30-5d948cce3f98.png)
+
+![image](https://user-images.githubusercontent.com/7317955/232350576-cb763a6c-afb6-4290-b9ad-2cbaed63a6d7.png)
+
+Guarda tu archivo .env y ahora ya podrás hacer pruebas de Email Testing para resetear contraseñas
+
 
 
 Una vez haya terminando la creación de las tablas con las migraciones ejecuta el siguiemte comando
