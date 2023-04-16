@@ -1,66 +1,62 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Instalación del proyecto
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+IMPORTANTE: Antes de instalar el proyecto debe tener instalado COMPOSER, PHP, MYSQL y APACHE en tu computadora
 
-## About Laravel
+   https://getcomposer.org/download/
+   
+Para instalar PHP, MYSQL y APACHE en Windows puedes usar XAMPP, para este proyecto se utilizó esta versión:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+    https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.1.17/xampp-windows-x64-8.1.17-0-VS16-installer.exe
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Instalación del código
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+NOTA: También puede descargar el archivo ZIP del repositorio y descomprimirlo en su computadora y pasar al paso de 
+    
+    $ composer install
 
-## Learning Laravel
+Clone el repositorio
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Abra el terminal de su computadora 
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Cambie el directorio actual por el deseado, en el cual clonará el proyecto
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Ejecute este comando de git para clonar el repo, YOUR-USERNAME corresponde al nombre del dueño del repositorio 
+y YOUR-REPOSITORY el nombre del repositorio que clonara
 
-## Laravel Sponsors
+    $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+    
+Presiona Enter y el repositorio será clonado al directorio de destino
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Instalando dependencias con composer
 
-### Premium Partners
+Luego de haber clonado el repositorio necesitara ejecutar el siguiente comando, dentro de la carpeta del proyecto desde su terminal
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+    $ composer install
 
-## Contributing
+Esto instalara las dependencias necesarias desde composer para el proyecto
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Ejecutar Migraciones de Base de Datos
 
-## Code of Conduct
+Luego de instalar las dependencias, asegurate de tener creada en MYSQL la base de datos que usaras, ese nombre se deberá usar en tu archivo .env
+que se habrá generado al instalar las dependencias. En caso utilices XAMPP verás estas variables de entorno en tu archivo .env
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=nombre_de_tu_bd
+    DB_USERNAME=usuario_de_la_bd
+    DB_PASSWORD=password_en_caso_tenga_uno
+    
+Asegurate de tener tu base creada y haber guardado los cambios del archivo .env, a continuación ejecuta el siguiene comando en tu consola:
 
-## Security Vulnerabilities
+    $ php artisan migrate
+    
+Esto ejecutrá las migraciones que hay en el proyecto y creara la tablas automáticamente en tu basde de datos.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Una vez haya terminando la creación de las tablas con las migraciones ejecuta el siguiemte comando
 
-## License
+    $ npm run dev
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Abra una nueva terminal y ejecute el siguiente comonda para visualizar el proyecto
+
+    $ php artisan serve
