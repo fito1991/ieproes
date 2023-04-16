@@ -53,7 +53,7 @@ Asegurate de tener tu base creada y haber guardado los cambios del archivo .env,
     
 Esto ejecutrá las migraciones que hay en el proyecto y creara la tablas automáticamente en tu basde de datos.
 
-## Habilitar envios de corre de prueba
+## Habilitar envios de correo de prueba
 
 Si deseas probar el envió de correos como por ejemplo, el reseteo de contraseña, puede crear una cuenta en MAILTRAP
 
