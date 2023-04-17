@@ -35,6 +35,22 @@ Luego de haber clonado el repositorio necesitara ejecutar el siguiente comando, 
 
 Esto instalara las dependencias necesarias desde composer para el proyecto
 
+## Instalando dependencias de node
+
+Ejecuta el siguiente comando para instalar las dependecias y la carpeta de node_modules
+
+    $ npm install
+    
+## Creando archivo .env
+
+Crea el archivo .env en la raíz del proyecto, puedes usar el .env.example para crearlo, solo debes copiar y pegar el contenido de .env.example en tu archivo .env
+
+## Generando key para tu proyecto
+
+Luego ejecuta el siguiente comando para generar una key para tu proyecto
+
+    $ php artisan key:generate
+
 ## Ejecutar Migraciones de Base de Datos
 
 Luego de instalar las dependencias, asegurate de tener creada en MYSQL la base de datos que usaras, ese nombre se deberá usar en tu archivo .env
